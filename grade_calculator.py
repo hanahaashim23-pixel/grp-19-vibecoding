@@ -1,4 +1,4 @@
-# Grade Calculator
+# Grade Calculator with Grades
 
 name = input("Enter student's name: ")
 
@@ -9,9 +9,13 @@ mark3 = float(input("Enter mark for subject 3: "))
 average = (mark1 + mark2 + mark3) / 3
 
 print("Student Name:", name)
-print("Average Mark:", average)
+print("Average:", average)
 
-if average >= 40:
-    print("Result: Pass")
+if average >= 75:
+    print("Grade: A")
+elif average >= 60:
+    print("Grade: B")
+elif average >= 40:
+    print("Grade: C")
 else:
     print("Result: Fail")
