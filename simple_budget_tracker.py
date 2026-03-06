@@ -1,4 +1,4 @@
-# Monthly Budget Program
+# Monthly Budget Program with Low Funds Warning
 
 budget = float(input("Enter your total monthly budget: "))
 
@@ -13,4 +13,8 @@ print("---------------------------")
 print("Total Budget      :", budget)
 print("Total Expenses    :", total_expenses)
 print("Remaining Balance :", remaining_balance)
+
+if remaining_balance < 500:
+    print("Warning: Low Funds")
+    
 print("---------------------------")
