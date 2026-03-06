@@ -1,12 +1,21 @@
-# Monthly Budget Program with Low Funds Warning
+# Monthly Budget Program with Multiple Expenses
 
 budget = float(input("Enter your total monthly budget: "))
 
-expense1 = float(input("Enter expense 1: "))
-expense2 = float(input("Enter expense 2: "))
-expense3 = float(input("Enter expense 3: "))
+total_expenses = 0
 
-total_expenses = expense1 + expense2 + expense3
+while True:
+    expense = input("Enter an expense (type 'done' to finish): ")
+    
+    if expense.lower() == "done":
+        break
+    
+    try:
+        expense_amount = float(expense)
+        total_expenses += expense_amount
+    except ValueError:
+        print("Invalid input. Please enter a number or 'done'.")
+
 remaining_balance = budget - total_expenses
 
 print("---------------------------")
