@@ -1,8 +1,8 @@
-# Grade Calculator with Continuous Execution
+# Grade Calculator with Continuous Execution and Formatted Output
 
 while True:
     name = input("Enter student's name (type 'Exit' to stop): ")
-    
+
     if name.lower() == "exit":
         print("Program ended.")
         break
@@ -13,16 +13,17 @@ while True:
 
     average = (mark1 + mark2 + mark3) / 3
 
-    print("Student Name:", name)
-    print("Average:", average)
-
     if average >= 75:
-        print("Grade: A")
+        grade = "A"
     elif average >= 60:
-        print("Grade: B")
+        grade = "B"
     elif average >= 40:
-        print("Grade: C")
+        grade = "C"
     else:
-        print("Result: Fail")
+        grade = "Fail"
 
-    print("---------------------------")
+    print("------------------------------")
+    print("Name   :", name)
+    print("Average:", round(average, 1))
+    print("Grade  :", grade)
+    print("------------------------------")
